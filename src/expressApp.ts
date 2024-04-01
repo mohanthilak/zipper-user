@@ -30,6 +30,12 @@ export default async (app: Application )=>  {
         console.log("\n",req.url);
         next();
     })
+    
+    //Test route
+    app.get("/", (req,res)=>{
+        res.status(200).send("<h1>Welcome to Zipper User API</h1>")
+    })
+
 
     let channel: Channel;
     try{
