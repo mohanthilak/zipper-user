@@ -21,7 +21,7 @@ export default async (app: Application )=>  {
     app.use(cookieParser())
 
     app.use(cors({
-        origin: ['http://localhost:3000'],
+        origin: ['http://localhost:3000', "https://zipper-frontend.vercel.app"],
         methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE'],
         credentials: true,
     }));
