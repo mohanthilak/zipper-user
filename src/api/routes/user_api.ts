@@ -40,6 +40,9 @@ declare global {
 export const UserAPI = (app: Application, channel: Channel, service: UserService)=>{
     // SubscribeMessage(channel)
     let i =0;
+    app.get("/", (req,res)=>{
+        res.status(200).send("<h1>Welcome to Zipper User API</h1>")
+    })
     app.get("/trial", async (req:Request, res: Response)=>{
         console.log(++i)
         let data = await service.GetAllUsers();
